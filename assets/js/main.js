@@ -17,7 +17,6 @@ STRUMENTI
 - Math.round ?
 */
 
-// Calcolo il costo lordo del viaggio
 // Calcolo il prezzo scontato a seconda dell'età
 // Formatto il prezzo scontato per avere due cifre decimali
 
@@ -30,7 +29,7 @@ if (isNaN(kms) || kms <= 0) {
   alert("ERRORE: Il valore deve essere un numero maggiore di 0");
 } else {
   // Chiedo all'utente l'età e controllo che sia un numero e che sia maggiore o uguale a 0
-  // N.B. ACCETTIAMO ANCHE 0 NEL CASO DI NEONATO CHE, COMUNQUE, DA CONSEGNA NON VIAGGIA GRATIS
+  // N.B. ACCETTIAMO ANCHE 0 NEL CASO DI NEONATO CHE, COMUNQUE, DA CONSEGNA NON VIAGGIA GRATIS ED USIAMO MATH.FLOOR() NEL CASO L'UTENTE INSERISCA PER QUALCHE MOTIVO UN NUMERO DECIMALE
   const userAge = Math.floor(Number(prompt("Quanti anni hai?")));
 
   console.log(`Age: ${userAge}`);
@@ -38,6 +37,10 @@ if (isNaN(kms) || kms <= 0) {
   if (isNaN(userAge) || userAge < 0) {
     alert("ERRORE: Il valore deve essere un numero maggiore o uguale a 0");
   } else {
-    
+    // Calcolo il costo lordo del viaggio
+    const fullPrice = kms * 0.21;
+
+    console.log(`Full price: ${fullPrice}`);
+
   }
 }
