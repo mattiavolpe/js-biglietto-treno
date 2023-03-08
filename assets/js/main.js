@@ -17,7 +17,6 @@ STRUMENTI
 - Math.round ?
 */
 
-// Calcolo il prezzo scontato a seconda dell'età
 // Formatto il prezzo scontato per avere due cifre decimali
 
 // Chiedo all'utente quanti km deve percorrere e controllo che sia un numero e che sia maggiore di 0
@@ -42,5 +41,19 @@ if (isNaN(kms) || kms <= 0) {
 
     console.log(`Full price: ${fullPrice}`);
 
+    // Calcolo lo sconto a seconda dell'età
+    // ASSEGNO A DISCOUNTEDPRICE IL VALORE DI FULLPRICE COSÌ DA POTER EVITARE IL SECONDO ELSE PER FARE L'ASSEGNAZIONE
+    let discountedPrice = fullPrice;
+    if (userAge < 18) {
+      discountedPrice = fullPrice * 0.8;
+
+      console.log(`Discounted price: ${discountedPrice}`);
+
+    } else if (userAge >= 65) {
+      discountedPrice = fullPrice * 0.6;
+
+      console.log(`Discounted price: ${discountedPrice}`);
+
+    }
   }
 }
