@@ -15,9 +15,8 @@ STRUMENTI
 - Number()
 - if else
 - Math.round ?
+- getElementById ed innerHTML
 */
-
-// Formatto il prezzo scontato per avere due cifre decimali
 
 // Chiedo all'utente quanti km deve percorrere e controllo che sia un numero e che sia maggiore di 0
 const kms = Number(prompt("Quanti km devi percorrere? (Separare i decimali con il punto)"));
@@ -55,5 +54,16 @@ if (isNaN(kms) || kms <= 0) {
       console.log(`Discounted price: ${discountedPrice}`);
 
     }
+
+    // Formatto il prezzo scontato per avere due cifre decimali
+    const priceToShow = (Math.round(discountedPrice * 100) / 100).toFixed(2);
+
+    console.log(`Final price: ${priceToShow}`);
+
+    // Mostro all'utente il prezzo finale in pagina
+    const finalPriceContainer = document.getElementById("finalPriceContainer");
+    finalPriceContainer.innerHTML = `<h1 style="text-align: center">Il costo del tuo biglietto sarà di</h1>
+    <h1 style="text-align: center; color: green; text-decoration: underline">${priceToShow}€</h1>`;
+
   }
 }
