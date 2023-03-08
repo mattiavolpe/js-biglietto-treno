@@ -56,6 +56,7 @@ if (isNaN(kms) || kms <= 0) {
     }
 
     // Formatto il prezzo scontato per avere due cifre decimali
+    // ADD TOFIXED TO SHOW ".00" ALSO
     const priceToShow = (Math.round(discountedPrice * 100) / 100).toFixed(2);
 
     console.log(`Final price: ${priceToShow}`);
