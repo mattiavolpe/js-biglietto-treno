@@ -62,9 +62,9 @@ if (isNaN(kms) || kms <= 0) {
 
     // Mostro all'utente il prezzo finale in pagina
     const finalPriceContainer = document.getElementById("finalPriceContainer");
-    finalPriceContainer.innerHTML = `<p style="text-align: center">Km da percorrere: ${kms}</p>
-    <p style="text-align: center">Età passeggero: ${userAge}</p>
-    <p style="text-align: center">Il costo del tuo biglietto sarà di</p>
-    <p style="text-align: center; color: green; text-decoration: underline">${priceToShow}€</p>`;
+    finalPriceContainer.innerHTML = `<p>Km da percorrere: ${kms}</p>
+    <p>Età passeggero: ${userAge}</p>
+    <p>Il costo del tuo biglietto sarà di</p>
+    <p style="color: green; text-decoration: underline">${priceToShow}€</p>`;
   }
 }
