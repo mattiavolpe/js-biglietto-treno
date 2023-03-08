@@ -24,7 +24,7 @@ const kms = Number(prompt("Quanti km devi percorrere? (Separare i decimali con i
 console.log(`Km: ${kms}`);
 
 if (isNaN(kms) || kms <= 0) {
-  alert("ERRORE: Il valore deve essere un numero maggiore di 0");
+  alert("ERRORE: Il valore deve essere un numero maggiore di 0. Ricarica la pagina per un nuovo calcolo");
 } else {
   // Chiedo all'utente l'età e controllo che sia un numero e che sia maggiore o uguale a 0
   // N.B. ACCETTIAMO ANCHE 0 NEL CASO DI NEONATO CHE, COMUNQUE, DA CONSEGNA NON VIAGGIA GRATIS ED USIAMO MATH.FLOOR() NEL CASO L'UTENTE INSERISCA PER QUALCHE MOTIVO UN NUMERO DECIMALE
@@ -33,7 +33,7 @@ if (isNaN(kms) || kms <= 0) {
   console.log(`Age: ${userAge}`);
 
   if (isNaN(userAge) || userAge < 0) {
-    alert("ERRORE: Il valore deve essere un numero maggiore o uguale a 0");
+    alert("ERRORE: Il valore deve essere un numero maggiore o uguale a 0. Ricarica la pagina per un nuovo calcolo");
   } else {
     // Calcolo il costo lordo del viaggio
     const fullPrice = kms * 0.21;
