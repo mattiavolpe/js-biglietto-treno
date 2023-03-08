@@ -22,3 +22,14 @@ STRUMENTI
 // Calcolo il costo lordo del viaggio
 // Calcolo il prezzo scontato a seconda dell'età
 // Formatto il prezzo scontato per avere due cifre decimali
+
+// Chiedo all'utente quanti km deve percorrere e controllo che sia un numero e che sia maggiore di 0
+const kms = Number(prompt("Quanti km devi percorrere? (Separare i decimali con il punto)"));
+
+console.log(`Km: ${kms}`);
+
+if (isNaN(kms) || kms <= 0) {
+  alert("ERRORE: Il valore deve essere un numero maggiore di 0");
+} else {
+  
+}
